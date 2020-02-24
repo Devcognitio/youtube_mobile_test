@@ -9,6 +9,17 @@ Feature:  Find Videos on Youtube
     Then He should see that the first video belongs to Metallica Band
 
   Scenario Outline:  Find Videos on Youtube
+    Given that el actor wants to see a Video
+    |nameSong|nameBand|
+    |<nameSong>|<nameBand>|
+    When He write the name of the video
+    Then He should see that the video belongs to correct Band
+    Examples:
+      | nameSong     | nameBand         |
+      | Paid in Full | Sonata Arctica   |
+      | Soldier Side | System Of A Down |
+
+  Scenario Outline:  Find Videos on Youtube
     Given that <actor> wants to search a Video
     When He searchs <nameSong>
     Then He should see that the first video belongs to <nameBand> Band

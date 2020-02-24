@@ -6,7 +6,6 @@ import net.serenitybdd.screenplay.Question;
 import static co.com.devco.userinterface.pages.ListedVideosPage.CARD_VIDEO;
 
 public class FirstVideo implements Question<Boolean> {
-
     private String nameBand;
 
     public FirstVideo(String nameBand){
